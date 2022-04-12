@@ -5,7 +5,7 @@ from sklearn import preprocessing
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('whine_model.pkl', 'rb'))
+model = pickle.load(open('wine_model.pkl', 'rb'))
 
 
 @app.route('/')
