@@ -20,7 +20,7 @@ def predict():
 
     prediction = model.predict(np.array([final_features]))
 
-    return render_template('prediction.html', prediction_text='Residual sugar in this bottle of wine is {}'.format(prediction[0]))
+    return render_template('prediction.html', prediction_text='Your flight have {}% chance to be delayed'.format(prediction[0]))
 
 
 if __name__ == "__main__":
