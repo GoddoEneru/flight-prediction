@@ -28,7 +28,7 @@ def predict():
     ))
 
     return render_template('prediction.html', prediction_text='Your flight have {}% chance to be delayed'.format(
-        pred_period
+        round(pred_period[0]*100, 2)
     ))
 
 
