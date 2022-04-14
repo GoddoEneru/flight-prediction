@@ -61,7 +61,7 @@
 		background-color: rgb(31, 33, 35);
 	}
 
-	#origin:invalid, #dest:invalid, ::placeholder{
+	select:invalid, ::placeholder{
 		color: rgb(170, 163, 152);
 	}
 
@@ -97,7 +97,7 @@
 	}
 
 	.input-row select{
-		width: 45%;
+		width: 27%;
 	}
 
 @media only screen and (max-width: 600px) {

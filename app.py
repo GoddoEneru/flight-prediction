@@ -1,11 +1,10 @@
-import numpy as np
-import pandas as pd
 from flask import Flask, request, render_template
-from sklearn import preprocessing
-import pickle
+import lightgbm as lgb
+from create_df import acquisition, columns
 
 app = Flask(__name__)
-model = pickle.load(open('wine_model.pkl', 'rb'))
+
+model = lgb.Booster(model_file='air_mode.txt')
 
 
 @app.route('/')
@@ -16,11 +15,18 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     feature_list = request.form.to_dict()
-    final_features = list(feature_list.values())
 
-    prediction = model.predict(np.array([final_features]))
-
-    return render_template('prediction.html', prediction_text='Your flight have {}% chance to be delayed'.format(prediction[0]))
+    return render_template('prediction.html', prediction_text='Your flight have {}% chance to be delayed'.format(
+        model.predict(acquisition(
+            columns,
+            1,
+            2354,
+            feature_list['airline'],
+            7,
+            feature_list['origin'],
+            feature_list['dest']
+        ))
+    ))
 
 
 if __name__ == "__main__":
