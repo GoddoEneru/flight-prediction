@@ -7,7 +7,7 @@
 	}
 
 	body{
-		background-color:#202020;
+		background-color:rgb(24, 26, 27);
 	}
 
 	.result{
@@ -35,11 +35,11 @@
 
 	form{
 		width: 400px;
-		background:#333;
+		background:rgb(38, 42, 43);
 		border-radius:10px;
 		padding: 50px 50px;
 		margin-top: 8vh;
-		box-shadow: 0px 0px 10px #5DE0D2;
+		box-shadow: rgb(27 140 131) 0px 0px 10px;
 	}
 
 	form label, form input, form select, button, a{
@@ -54,24 +54,23 @@
 
 	form input, form select{
 		border-width: 2px;
-		border-color: #dedede;
 		margin-bottom: 30px;
 		border-style: none;
 		border-bottom-style: solid;
-		border-color: #5DE0D2;
-		background-color: #292929;
+		border-color: rgb(26, 134, 123);
+		background-color: rgb(31, 33, 35);
 	}
 
 	#origin:invalid, #dest:invalid, ::placeholder{
-		color: #9d9d9d
+		color: rgb(170, 163, 152);
 	}
 
 	a, button{
 	    text-decoration: none;
 		border-style: none;
 		border-radius:4px;
-		background-color:#5DE0D2;
-		color:#fff;
+		background-color:rgb(27, 140, 131);
+		color:rgb(232, 230, 227);
 		width: 40%;
 		margin-left: 30%;
 		transition: .35s ease-in-out;
